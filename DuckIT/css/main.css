@@ -112,21 +112,21 @@ img.float {
 	margin-right: 5px;
 	border-radius:7px;
 	padding: 7px 7px 10px 7px;
-	background-color:#B2B2B2;
+	background-color:rgba(150,150,150,0.2);
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	-ms-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
 }
 img.float:hover {
 	background-color:#027ABF;
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-ms-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
 }
 p {
 	text-align: left;
 }
 #footer-section {
-	width: 150px;
+	min-width: 100px;
 	border-left: 2px solid #6e6e6e;
 	margin-right: 20px;
 	margin-left: 20px;
@@ -137,7 +137,7 @@ p {
 }
 #footer-section p {
 	margin: 0px;
-	margin-bottom: 5px;
+	margin-bottom: 7px;
 }
 #footer-section a {
 	text-decoration: none;
