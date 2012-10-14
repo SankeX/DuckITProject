@@ -19,13 +19,16 @@ body {
 	display:inline-block;
 	margin-top: 15px;
 	text-align: right;
-	margin-top:5px\9;
+	margin-top:5px\9;  /* IE Conditional to fix layout*/
+	margin-bottom
 } 
 #banner {
 	width: 400px;
 	height: 60px;
 	text-align: left;
 	color:#f1f1f1;
+	float: left;
+	margin-bottom: 1em\9;  /* IE Conditional to fix layout*/
 }
 h1.banner {
 	font-size: 38pt;
@@ -33,13 +36,11 @@ h1.banner {
 	-webkit-margin-after: 0em;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
+	margin-top: 15px;
 }
 #navbar {
 	height: 60px;
-	display: inline-block;
-	position: absolute;
-	top: 26px;
-	right: 253px;
+	float: right;
 }
 ul.nav {
 	text-decoration: none;
@@ -61,9 +62,16 @@ li.nav {
 	background-color:#f1f1f1;
 	-webkit-border-radius: 15px 15px 15px 15px;
 	border-radius: 15px 15px 15px 15px;
+	border: 3px solid #f1f1f1;
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	-ms-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
 }
 li.nav:hover {
 	background-color:#6c6c6c;
+	border: 3px solid #027ABF;
 }
 a.link {
 	text-decoration: none;
@@ -86,6 +94,9 @@ h3.title {
 	font-size: 18pt;
 	-webkit-margin-after: 0em;
 	margin-bottom:0em;
+	position: relative;
+	left: 2px;
+	left: 0px\9;  /* IE Conditional to fix layout*/
 }
 #main-content {
 	width: 900px;
@@ -102,8 +113,8 @@ h3.title {
 	padding-right: 5px;
 	position: relative;
 	top: -5px;
-	left: -2px;
-	margin-left: 5px\9;
+	left: -3px\9;  /* IE Conditional to fix layout*/
+	margin-left: 5px\9;  /* IE Conditional to fix layout*/
 	text-align:left;
 }
 img.float {
@@ -124,10 +135,12 @@ img.float:hover {
 }
 p {
 	text-align: left;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 #footer-section {
 	min-width: 100px;
-	border-left: 2px solid #6e6e6e;
+	border-left: 2px ridge #c3c3c3;
 	margin-right: 20px;
 	margin-left: 20px;
 	margin-top: 7px;
@@ -147,4 +160,16 @@ p {
 }
 #footer-section a:hover {
 	text-decoration: underline;
+}
+a {
+	text-decoration: underline;
+	color: #4e4e4e;
+}
+h4.title {
+	color: #6e6e6e;
+	font-size: 16pt;
+	text-align: left;
+	margin: 0;
+	border-bottom: 2px ridge #c3c3c3;
+	width: 600px;
 }
