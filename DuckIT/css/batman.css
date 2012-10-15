@@ -1,0 +1,32 @@
+/* Batman CSS Spinner 
+Coded by Gary Simmons */
+body {
+	overflow: hidden;
+}
+div.batman-overlay {
+	display:inline-block;
+	margin-top: 15%;
+	background-image:url('/SankeX-DuckITProject-151012/SankeX-DuckITProject-6d2714f/DuckIT/images/batman.png');
+	width: 800px;
+	height: 473px;
+	position: absolute;
+	z-index: 5;
+	margin-left: 5%;
+	margin-right: auto;
+}
+.wrapper {
+	-webkit-animation: spin 0.7s infinite linear;
+	-moz-animation: spin 0.7s infinite linear;
+	-o-animation: spin 0.7s infinite linear;
+	-ms-animation: spin 0.7s infinite linear;
+}
+#batman-sound {
+	display:inline-block;
+	margin-top: 15%;
+	width: 800px;
+	height: 473px;
+	position: absolute;
+	z-index: 4;
+	margin-left: 5%;
+	margin-right: auto;
+}
