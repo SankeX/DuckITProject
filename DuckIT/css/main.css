@@ -1,9 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 body {
-	width:100%;
-	height:100%;
-	background-color:rgb(70,70,70);
+	background-color: #3a3a3a;
 	font-family:Calibri,Arial;
 }
 .outer {
@@ -78,8 +76,8 @@ a.link {
 	color:#6e6e6e;
 	padding-top: 20px;
 	padding-bottom: 22px;
-	padding-left: 15px;
-	padding-right: 16px;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 a.link:hover {
 	color:#fff;
@@ -95,7 +93,7 @@ h3.title {
 	-webkit-margin-after: 0em;
 	margin-bottom:0em;
 	position: relative;
-	left: 2px;
+	left: 0px;
 	left: 0px\9;  /* IE Conditional to fix layout*/
 }
 #main-content {
@@ -104,6 +102,7 @@ h3.title {
 	background-color:#f1f1f1;
 	padding: 5px;
 	display:inline-block;
+	text-align: left;
 }
 #footer {
 	width: 900px;
@@ -136,10 +135,13 @@ p {
 	text-align: left;
 	margin-left: 5px;
 	margin-right: 5px;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 1em;
 }
 a {
 	text-decoration: underline;
 	color: #4e4e4e;
+	border: 0px;
 }
 h4.title {
 	color: #6e6e6e;
@@ -152,35 +154,54 @@ h4.title {
 #footer-right {
 	float: right;
 }
-@-webkit-keyframes spin {
-	0% { -webkit-transform: rotate(0deg);}
-	100% { 
-	-webkit-transform: rotate(360deg);
-	}
+a.section {
+	font-size: 16pt;
 }
-@-moz-keyframes spin {
-	0% { -moz-transform: rotate(0deg);}
-	100% { 
-	-moz-transform: rotate(360deg);
-	}
+h4.section {
+	font-size: 16pt;
+	color: #6e6e6e;
+	margin: 0;
 }
-@-o-keyframes spin {
-	0% { -o-transform: rotate(0deg);}
-	100% { 
-	-o-transform: rotate(360deg);
-	}
+div.return {
+	position: fixed;
+	z-index: 6;
+	top: 5px;
+	right: 5px;
+	width: 100px;
+	height: 100px;
 }
-@-ms-keyframes spin {
-	0% { -ms-transform: rotate(0deg);}
-	100% { 
-	-ms-transform: rotate(360deg);
-	}
+div.return a {
+	color: #E2E2E2;
 }
-img.batman-spinner:hover {
-	-webkit-animation: spin 0.7s infinite linear;
-	-moz-animation: spin 0.7s infinite linear;
-	-o-animation: spin 0.7s infinite linear;
-	-ms-animation: spin 0.7s infinite linear;
-	background-image:url('/SankeX-DuckITProject-151012/SankeX-DuckITProject-6d2714f/DuckIT/images/batman.png');
-	z-index: 5;
+ul.contents {
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+	display: inline-block;
+}
+#contents {
+	width: 100px;
+	height: 200px;
+	position: absolute;
+	float: left;
+}
+img {
+	border: none;
+}
+.string {
+	background: rgb(125,126,125); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(61,61,61,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(61,61,61,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(61,61,61,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(61,61,61,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(61,61,61,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(61,61,61,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#3d3d3d',GradientType=0 ); /* IE6-9 */
+	color: #f1f1f1;
+	font-size: 14pt;
+	margin: 0px;
+	font-weight: bold;
+	padding: 2px;
 }
