@@ -9,12 +9,13 @@
 <script src="scripts/jquery-1.7.2.min.js"></script>
 <script src="scripts/lightbox.js"></script>
 <script src="scripts/scroll.js"></script>
+<script src="scripts/search.js"></script>
 <!-- Page Title -->
 <title>DuckIT - Home</title>
 </head>
 <body id="top">
-<div class="outer">
 <div class="wrapper">
+<div id="searchContainer"><input type="text" class="search" value="Search..."/><input type="button" onclick="search()" value="Search"></div>
 <!-- Header/Banner/Navbar -->
 <div id="header">
 <div id="banner">
@@ -34,7 +35,7 @@
 <br/>
 <![endif]-->
 <!-- Page Title-->
-<h3 class="title">Home</h3>
+<div id="titlebar"><h3 class="title">Home</h3><img src="images/fb.png" alt="Facebook" class="social"/><img src="images/twit.png" alt="Facebook" class="social"/></div>
 <div id="main-content">
 <a href="#one" class="section">Section One</a>|
 <a href="#two" class="section">Skip to Section Two</a>|
@@ -147,7 +148,6 @@ Website made by Team 'That's terrible...' &copy 2012
 <a href="#">Legal<a>
 <a href="#">Site Map</a>
 <a href="credits.html">Credits</a>
-</div>
 </div>
 </div>
 </div>

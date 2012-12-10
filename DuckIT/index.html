@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=8"/>
@@ -8,12 +8,13 @@
 <!-- Scripts -->
 <script src="scripts/jquery-1.7.2.min.js"></script>
 <script src="scripts/lightbox.js"></script>
+<script src="scripts/search.js"></script>
 <!-- Page Title -->
 <title>DuckIT - Home</title>
 </head>
 <body>
-<div class="outer">
 <div class="wrapper">
+<div id="searchContainer"><input type="text" class="search" value="Search..."/><input type="button" onclick="search()" value="Search"></div>
 <!-- Header/Banner/Navbar -->
 <div id="header">
 <div id="banner">
@@ -33,11 +34,15 @@
 <br/>
 <![endif]-->
 <!-- Page Title-->
-<h3 class="title">Home</h3>
+<div id="titlebar">
+<h3>Dev Elements</h3>
+<img src="images/fb.png" alt="Facebook" class="social"/>
+<img src="images/twit.png" alt="Twitter" class="social"/>
+</div>
 <!--<h3 class="title">Home</h3>-->
 <div id="main-content">
 <!-- Optional Image -->
-<a href="images/test.png" rel="lightbox" title="LightBox Test."><img src="images/test-thumb.png" alt="" class="float"/></a>
+<a href="images/test.png" rel="lightbox" title="LightBox Test."><img src="images/test-thumb.png" alt="" class="float"></a>
 <!-- Paragraphs/Main text -->
 <p>Lorem ipsum dolor sit amet, 
 consectetur adipiscing elit. 
@@ -46,7 +51,7 @@ Nulla ligula nisl, porttitor non ultricies vitae, condimentum at felis.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet consequat mi, 
 ut iaculis erat dictum nec. Mauris ipsum ipsum, tincidunt at pellentesque sed, tempus sed nulla. 
 Duis in leo eu mauris dignissim consectetur ac a enim. Nullam enim nunc, imperdiet et mollis eu, 
-dignissim nec nibh. Morbi quis eros nunc. Suspendisse nec pharetra nisl. Donec sodales, mi et eleifend molestie, 
+dignissim nec nibh. Morbi quis eros nunc. Suspendisse nec pharetra nisl.Donec sodales, mi et eleifend molestie, 
 nibh magna aliquet quam, sit amet malesuada massa ipsum vel est. Nunc placerat mi et nibh luctus vitae blandit elit pharetra. 
 Nullam turpis velit, mollis at adipiscing sit amet, luctus adipiscing risus.</p>
 <p>Lorem ipsum dolor sit amet, 
@@ -58,16 +63,14 @@ ut iaculis erat dictum nec. Mauris ipsum ipsum, tincidunt at pellentesque sed, t
 Duis in leo eu mauris dignissim consectetur ac a enim. Nullam enim nunc, imperdiet et mollis eu, 
 dignissim nec nibh. Morbi quis eros nunc. Suspendisse nec pharetra nisl. Donec sodales, mi et eleifend molestie, 
 nibh magna aliquet quam, sit amet malesuada massa ipsum vel est. Nunc placerat mi et nibh luctus vitae blandit elit pharetra. 
-Nullam turpis velit, mollis at adipiscing sit amet, luctus adipiscing risus.</p>
+Nullam turpis velit, mollis at adipiscing sit amet, luctus adipiscing risus</p>
 </div>
-<!-- Footer -->
 <div id="footer">
 Website made by Team 'That's terrible...' &copy 2012
 <div id="footer-right">
 <a href="#">Legal<a>
 <a href="#">Site Map</a>
 <a href="credits.html">Credits</a>
-</div>
 </div>
 </div>
 </div>
