@@ -9,12 +9,13 @@
 <script src="scripts/jquery-1.7.2.min.js"></script>
 <script src="scripts/lightbox.js"></script>
 <script src="scripts/search.js"></script>
+<script src="scripts/fadein.js"></script>
 <!-- Page Title -->
 <title>DuckIT - Home</title>
 </head>
 <body>
 <div class="wrapper">
-<div id="searchContainer"><input type="text" class="search" value="Search..."/><input type="button" onclick="search()" value="Search"></div>
+<div id="searchContainer"><input type="text" class="search" value="Search..." id="searchBox"/><input type="button" onclick="search()" value="Search" ></div>
 <!-- Header/Banner/Navbar -->
 <div id="header">
 <div id="banner">
@@ -22,11 +23,11 @@
 </div>
 <div id="navbar">
 <ul class="nav">
-<li class="nav"><a href="#" class="link">Home</a></li>
-<li class="nav"><a href="anchors.html" class="link">Anchors</a></li>
-<li class="nav"><a href="#" class="link">Portfolio</a></li>
+<li class="nav"><a href="index.html" class="link">Home</a></li>
+<li class="nav"><a href="about.html" class="link">About</a></li>
+<li class="nav"><a href="services,html" class="link">Services</a></li>
+<li class="nav"><a href="tutorial.html" class="link">Tutorials</a></li>
 <li class="nav"><a href="#" class="link">Contact</a></li>
-<li class="nav"><a href="#" class="link">Page 5</a></li>
 </ul>
 </div>
 </div>
@@ -35,12 +36,13 @@
 <![endif]-->
 <!-- Page Title-->
 <div id="titlebar">
-<h3>Dev Elements</h3>
+<h3>Contact Us!</h3>
 <img src="images/fb.png" alt="Facebook" class="social"/>
 <img src="images/twit.png" alt="Twitter" class="social"/>
 </div>
 <!--<h3 class="title">Home</h3>-->
 <div id="main-content">
+<p>You can use this form to contact us</p>
 <form action="php/contact.php" method="post">
 Name: <br>
 <input type="text" placeholder="Your Name" name="name"><br>
@@ -53,10 +55,9 @@ Message: <br>
 </form>
 </div>
 <div id="footer">
-Website made by Team 'That's terrible...' &copy 2012
+Website made by Team 'That's terrible...' &copy; 2012
 <div id="footer-right">
-<a href="#">Legal<a>
-<a href="#">Site Map</a>
+<a href="sitemap.html">Site Map</a>
 <a href="credits.html">Credits</a>
 </div>
 </div>
