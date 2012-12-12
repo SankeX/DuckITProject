@@ -6,7 +6,7 @@ body {
 	font-family:Calibri,Arial;
 }
 .wrapper {
-	width:1000px;
+	width:900px;
 	min-height: 400px;
 	margin-left:auto;
 	margin-right:auto;
@@ -16,15 +16,16 @@ body {
 	display:inline-block;
 	margin-top: 15px;
 	text-align: right;
-	margin-top:5px\9;  /* IE Conditional to fix layout*/
 	margin-bottom:0px;
+	margin-top:0px;
 } 
 #banner {
 	width: 400px;
 	text-align: left;
 	color:#f1f1f1;
 	float: left;
-	margin-bottom: 1em\9;  /* IE Conditional to fix layout*/
+	position:relative;
+	top: 10px;
 }
 h1.banner {
 	font-size: 38pt;
@@ -35,8 +36,10 @@ h1.banner {
 	margin-top: 15px;
 }
 #navbar {
-	height: 60px;
 	float: right;
+	position:relative;
+	top: 15px;
+	top: 5px\9;
 }
 ul.nav {
 	text-decoration: none;
@@ -183,19 +186,20 @@ img {
 	display:inline-block;
 	float:right;
 	padding: 5px 10px 5px 10px;
-	position:relative;
 	left:-45px;
 	-webkit-border-radius:5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	background-color:#f1f1f1;
+	postion:relative;
+	top: 3px;
 }
 #titlebar {
 	width:910px;
 	background-color:#027ABF;
 	display:inline-block;
 	margin-bottom: -5px;
-	margin-top: 0px;
+	margin-top: 2px;
 }
 #titlebar h3 {
 	color:#f1f1f1;
@@ -233,4 +237,57 @@ h1.test{
 }
 #section-nav li {
 	list-style: decimal-leading-zero;
+}
+ul.links li {
+	list-style:inside;
+}
+input.gosearch {
+	background-color:#00a2ff;
+	color:#f1f1f1;
+	border:1px solid #dadada;
+    -webkit-border-radius: 0px 7px 7px 0px;
+	border-radius: 0px 7px 7px 0px;
+    padding-left:5px; 
+ 	margin-right:2px;
+ 	margin-left:0px;
+ 	border-left:none;
+}
+input.searchinput {
+	border:1px solid #dadada;
+	border-right:none;
+    -webkit-border-radius: 7px 0px 0px 7px;
+	border-radius: 7px 0px 0px 7px;
+    padding-left:5px;
+    margin-right: 0px;
+ }
+ input{
+	border:1px solid #dadada;
+    -webkit-border-radius: 7px;
+	border-radius: 7px;
+    padding-left:5px;
+    margin-right: 0px;
+ }
+ input.submit {
+	background-color:#57a822;
+	color:#f1f1f1;
+ }
+ input.reset {
+ 	background-color:#d10202;
+ 	color:#f1f1f1;
+ }
+input:focus { 
+    outline:none;
+    border-color:#5bc3ff;
+    box-shadow:0 0 10px #5bc3ff;
+}
+textarea {
+	border:1px solid #dadada;
+    border-radius:7px;
+    padding-left:5px; 
+ 	margin-right:2px;
+}
+textarea:focus {
+	outline:none;
+    border-color:#5bc3ff;
+    box-shadow:0 0 10px #5bc3ff;
 }

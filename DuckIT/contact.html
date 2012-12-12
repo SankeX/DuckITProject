@@ -9,13 +9,12 @@
 <script src="scripts/jquery-1.7.2.min.js"></script>
 <script src="scripts/lightbox.js"></script>
 <script src="scripts/search.js"></script>
-<script src="scripts/fadein.js"></script>
 <!-- Page Title -->
 <title>DuckIT - Home</title>
 </head>
 <body>
 <div class="wrapper">
-<div id="searchContainer"><input type="text" class="search" value="Search..." id="searchBox"/><input type="button" onclick="search()" value="Search" ></div>
+<div id="searchContainer"><input type="text" value="Search..." class="searchinput"/><input type="button" onclick="search()" value="Go" class="gosearch"></div>
 <!-- Header/Banner/Navbar -->
 <div id="header">
 <div id="banner">
@@ -31,9 +30,6 @@
 </ul>
 </div>
 </div>
-<!--[if IE 8]>
-<br/>
-<![endif]-->
 <!-- Page Title-->
 <div id="titlebar">
 <h3>Contact Us!</h3>
@@ -50,8 +46,8 @@ Email: <br>
 <input type="text" placeholder="Your Email" name="email"><br>
 Message: <br>
 <textarea name="message" placeholder="Your Message" rows="5" cols="20"></textarea><br>
-<input type="submit">
-<input type="reset">
+<input type="submit" class="submit">
+<input type="reset" class="reset">
 </form>
 </div>
 <div id="footer">
