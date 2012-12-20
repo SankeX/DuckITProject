@@ -10,7 +10,7 @@
 <script src="scripts/lightbox.js"></script>
 <script src="scripts/search.js"></script>
 <!-- Page Title -->
-<title>DuckIT - Contact Us</title>
+<title>DuckIT - Our Services</title>
 </head>
 <body>
 <div class="wrapper">
@@ -26,40 +26,34 @@
 <li class="nav"><a href="about.html" class="link">About</a></li>
 <li class="nav"><a href="services.html" class="link">Services</a></li>
 <li class="nav"><a href="tutorial.html" class="link">Tutorials</a></li>
-<li class="nav"><a href="#" class="link">Contact</a></li>
+<li class="nav"><a href="contact.html" class="link">Contact</a></li>
 </ul>
 </div>
 </div>
 <!-- Page Title-->
 <div id="titlebar">
-<h3>Contact Us!</h3>
+<h3>Our Services</h3>
 <img src="images/fb.png" alt="Facebook" class="social" onclick="social('Facebook')"/>
 <img src="images/twit.png" alt="Facebook" class="social" onclick="social('Twitter')"/>
 </div>
 <!--<h3 class="title">Home</h3>-->
 <div id="main-content">
-<p>You can use the following form to contact us, we will respond to your message as soon as we can.</p>
-<div id="mapright">
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=fareham+college&amp;aq=&amp;sll=52.8382,-2.327815&amp;sspn=8.671124,23.269043&amp;t=w&amp;ie=UTF8&amp;hq=fareham+college&amp;ll=50.850805,-1.199311&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=fareham+college&amp;aq=&amp;sll=52.8382,-2.327815&amp;sspn=8.671124,23.269043&amp;t=w&amp;ie=UTF8&amp;hq=fareham+college&amp;ll=50.850805,-1.199311&amp;spn=0.006295,0.006295" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-</div>
-<form action="php/contact.php" method="post">
+<p>Need help with your problem? Use this form to submit your specific problem to us.</p>
+<form action="php/serviceform.php" method="post">
 Name: <br>
 <input type="text" placeholder="Your Name" name="name"><br>
 Email: <br>
 <input type="text" placeholder="Your Email" name="email"><br>
-Message: <br>
-<textarea name="message" placeholder="Your Message" rows="5" cols="20"></textarea><br>
+Service: <br>
+<select name="service">
+<option value="Service 1">Service 1</option>
+<option value="Service 2">Service 2</option>
+</select><br>
+Other Details: <br>
+<textarea name="details" placeholder="Other Details" rows="5" cols="20"></textarea><br>
 <input type="submit" class="submit">
 <input type="reset" class="reset">
 </form>
-<p class="address">Address:</p>
-<p class="address">Fareham College,</p>
-<p class="address">Bishopsfield Road,</p>
-<p class="address">Fareham,</p>
-<p class="address">Hampshire,</p>
-<p>PO14 1NH</p>
-<p class="number">Phone Number:</p>
-<p>01134960258</p>
 </div>
 <div id="footer">
 Website made by Team 'That's terrible...' &copy; 2012

@@ -14,7 +14,6 @@
 </head>
 <body>
 <div class="wrapper">
-<div id="searchContainer"><input type="text" value="Search..." class="searchinput"/><input type="button" onclick="search()" value="Go" class="gosearch"></div>
 <!-- Header/Banner/Navbar -->
 <div id="header">
 <div id="banner">
@@ -33,15 +32,41 @@
 <!-- Page Title-->
 <div id="titlebar">
 <h3>Our Services</h3>
-<img src="images/fb.png" alt="Facebook" class="social"/>
-<img src="images/twit.png" alt="Twitter" class="social"/>
+<img src="images/fb.png" alt="Facebook" class="social" onclick="social('Facebook')"/>
+<img src="images/twit.png" alt="Facebook" class="social" onclick="social('Twitter')"/>
 </div>
 <!--<h3 class="title">Home</h3>-->
 <div id="main-content">
-<!-- Optional Image -->
-<a href="images/pcsmash.png" rel="lightbox" title="LightBox Test."><img src="images/pc-thumb.png" alt="" class="float"></a>
-<!-- Paragraphs/Main text -->
-<p>I need content</p>
+<p>We at DuckIT know how frustrating it can be when you computer decides that it doesn't want to play anymore, with this in mind we offer some services to expedite your computers recovery, if you are local to us you can send in your computer so that our trained technicians can take a look at it, or if you're as lazy as us ducks are then we offer a remote access service to help you with all of your software problems.</p>
+<h4 class="section">Remote Desktop</h4>
+<div id="box-right">
+<p>Evaluation: Free</p>
+<p>Price of fixing the issue is based on the time taken to fix</p>
+</div>
+<p>If you have a software related issue, or a basic virus. Sending your computer to us may be unnecessary. For simple issues we can remotely connect to your computer through the internet no matter how far away you are from us.</p>
+<h4 class="header">Hardware Repair</h4>
+<div id="box-right">
+<p>Evaluation: Free</p>
+<p>Price of fix varies based upon the hardware issue</p>
+</div>
+<p>When an issue prevents us from remotely fixing it, sending us the computer is necessary. These problems could be hardware or a severe virus preventing remotely accessing your computer.</p>
+<h4 class="header">How can we help?</h4>
+<p>If you need us to fix a problem, use our service request form here:</p>
+<form action="php/serviceform.php" method="post">
+Name: <br>
+<input type="text" placeholder="Your Name" name="name"><br>
+Email: <br>
+<input type="text" placeholder="Your Email" name="email"><br>
+Service: <br>
+<select name="service">
+<option value="Service 1">Service 1</option>
+<option value="Service 2">Service 2</option>
+</select><br>
+Details about your problem: <br>
+<textarea name="details" placeholder="Other Details" rows="5" cols="20"></textarea><br>
+<input type="submit" class="submit">
+<input type="reset" class="reset">
+</form>
 </div>
 <div id="footer">
 Website made by Team 'That's terrible...' &copy; 2012

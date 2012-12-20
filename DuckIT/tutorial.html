@@ -9,12 +9,12 @@
 <script src="scripts/jquery-1.7.2.min.js"></script>
 <script src="scripts/lightbox.js"></script>
 <script src="scripts/search.js"></script>
+<script src="scripts/scroll.js"></script>
 <!-- Page Title -->
 <title>DuckIT - Tutorials</title>
 </head>
-<body>
+<body id="top">
 <div class="wrapper">
-<div id="searchContainer"><input type="text" value="Search..." class="searchinput"/><input type="button" onclick="search()" value="Go" class="gosearch"></div>
 <!-- Header/Banner/Navbar -->
 <div id="header">
 <div id="banner">
@@ -33,15 +33,93 @@
 <!-- Page Title-->
 <div id="titlebar">
 <h3>Tutorials</h3>
-<img src="images/fb.png" alt="Facebook" class="social"/>
-<img src="images/twit.png" alt="Twitter" class="social"/>
+<img src="images/fb.png" alt="Facebook" class="social" onclick="social('Facebook')"/>
+<img src="images/twit.png" alt="Facebook" class="social" onclick="social('Twitter')"/>
 </div>
-<!--<h3 class="title">Home</h3>-->
 <div id="main-content">
-<!-- Optional Image -->
-<a href="images/pcsmash.png" rel="lightbox" title="LightBox Test."><img src="images/pc-thumb.png" alt="" class="float"></a>
-<!-- Paragraphs/Main text -->
-<p>CONTENT! I NEED A CONTENT!</p>
+<div id="section-nav">
+Page Contents:
+<ul>
+<li><a href="#one">Hardware</a></li>
+<li><a href="#one-1">How to setup a PC</a></li>
+<li><a href="#one-2">How to setup a router</a></li>
+<li><a href="#one-3">How to install RAM</a></li>
+<li><a href="#two">Software</a></li>
+<li><a href="#two-1">How to install and set up your antivirus</a></li>
+<li><a href="#two-2">How to change personal desktop settings</a></li>
+<li><a href="#three">FAQ</a></li>
+</ul>
+</div>
+<p>In This section we will cover various tutorials about hardware and software</p>
+<h4 class="section" id="one">Hardware</h4>
+<h5 class="subsection" id="one-1">How to build a PC</h5>
+<p>This video playlist shows how to build a PC.</p>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/SriaPrPNCvM?list=PL286451A5C1A4B20C&amp;hl=en_GB" frameborder="0" allowfullscreen></iframe>
+<p class="credit">Video Source: Richard, Gary & Dan's Unit 2 PC Build</p>
+<h5 class="subsection" id="one-2">How to setup a router</h5>
+<p>Have you got yourself a new router? are there barely any instructions on how to set it up so you can get your network working at home?</p>
+<p>While there are many, many different routers they all operate in a fairly similar manner, this tutorial will give you a detailed description along with a video that will show you which cables connect to where and how to get started on setting up your home network, while certain aspect of the installation process will be vary depending on your model, such as inputting passwords and how many lines can be connected the process will remain the same.</p>
+<p>Please see the following video which will explain in detail how to connect a router.</p>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/rEUAAiAIKbw" frameborder="0" allowfullscreen></iframe>
+<p class="credit">Video Source: ExpertVillage YouTube Channel</p>
+<h5 class="subsection" id="one-3">How to install RAM</h5>
+<p>do you want your computer to run a bit more smoothly? can you only run one program at a time 
+without your computer deciding to run in slow motion?</p>
+<p>By upgrading the ram in your computer you will be able to increase the speed and productivity of your machine, to do this you will need to open up the desktop unit or the base of your device if you need help in gaining access to the interior of your machine search for the model number, there always videos detailing the correct way to open up desktop units and laptops.</p>
+<p>Please see the following video which will explain in detail how to install ram.</p>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/M7vt_VYt6vY" frameborder="0" allowfullscreen></iframe>
+<p class="credit">Video Source: Jetskier1616 YouTube Channel</p>
+<h4 class="section" id="two">Software</h4>
+<h5 class="subsection" id="two-1">How to install and set up your antivirus</h5>
+<p>Your computer needs to be protected online and so you will need to install an antivirus application onto your computer this will make using the internet much safer. this tutorial is designed to show you how to install antivirus software, to make this simple we have chosen the AVG free antivirus software.</p>
+<p>Please follow the instructions on the video.</p>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/aZCmxj4n3MY" frameborder="0" allowfullscreen></iframe>
+<p class="credit">Video Source: Official AVG YoutTube Channel</p>
+<h5 class="subsection" id="two-2">How to change personal desktop settings</h5>
+<p>Whether you want to change the appearance of your desktop, or make any changes to other desktop settings you will need to know how to access the window you need and know what the options you will be faced with are. please follow the video below for help with desktop settings.</p>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/Z20jqzD-OJ0" frameborder="0" allowfullscreen></iframe>
+<p class="credit">Video Source: PCDesktops YouTube Channel</p>
+<div id="section-nav">
+FAQ Contents:
+<ul>
+<li><a href="#four">Q1</a></li>
+<li><a href="#five">Q2</a></li>
+<li><a href="#six">Q3</a></li>
+<li><a href="#seven">Q4</a></li>
+<li><a href="#eight">Q5</a></li>
+</ul>
+</div>
+<h4 class="section" id="three">Frequently Asked Questions (FAQs)</h4>
+<p>Here are some Frequently Asked Questions (FAQs) that we get asked</p>
+<h5 class="subsection" id="four">Q1: My computer won't turn on, what could be wrong?</h5>
+<p>
+<img src="images/faq1.png" alt="The Power Switch at teh back must be turned on" class="right" width="350" height="200"/>
+There could be many reasons why your computer won't turn on. The most common of which is that the the computer and/or the monitor aren't plugged in or turned on. First look at the back of the computer, you will see something like this, similar to the image on the right.</p>
+<p>As you can see there is a power cable connector and a power switch. to ensure that this is not the problem; plug in the power cable and make sure that the power switch is turned on (line furthest away from you is in the on position.) Then you must make sure it it turned on at the wall/plug.</p>
+<br/>
+<p>Now you need to make sure the monitor is also plugged in at the plug/wall. Once you have plugged it in and turned it on, you must now locate the VGA cable. The VGA cable generally is blue, and has two screws that keep the cable in place.</p>
+<p>You must make sure that one end is plugged into and screwed in on the monitor and the bottom most socket on the back of the computer. Once you have done this, turn the monitor and the computer on. This should turn the computer on, and should be displayed on the monitor.
+<h5 class="subsection" id="five">Q2: I can't log onto the network. what is wrong?</h5>
+<p>
+<img src="images/faq3.png" alt="The Ethernet cable must be plugged into the computer" class="right" width="200" height="200"/>
+If you can't log on there may be one of two things wrong.
+<p class="bold">Solution 1:</p>
+<p>The computer's ethernet cable is not plugged into either the computer or the wall.An ethernet cable looks like this:</p>
+<p>To fix this problem you need to locate the ethernet cable and to find out which ends lead where. If the cable leads to the wall and the computer then go to solution 2. If the ethernet is not plugged into either then you will need to find where it plugs into in the wall and the computer, then plug it in. Now, try to log onto the network again. If you still can't log onto the network then go to solution 2.</p>
+<p class="bold">Solution 2:</p>
+<p>If you find that both of the ends are connected to your computer and the wall then go to our 'contact us' or 'Services' page for information on how we can help you.</p>
+<h5 class="subsection" id="six">Q3: Why does my computer get a blue screen and restart</h5>
+<p>There is many reasons why the computer may get a blue screen and restart. And there is  2 different procedures that you can take:</p>
+<p class="bold">Procedure 1:</p>
+<p>Restart the computer. If you find the computer is still blue screening go to procedure 2.</p>
+<p class="bold">Procedure 2:</p>
+<p>Use our form on the <a href="services.html">Services</a> page to get a personal responce from the staff of DuckIT.</p>
+<h5 class="subsection" id="seven">Q4: Is there any way I can contact you if you are closed or not there?</h5>
+<p>Yes, if you go to our '<a href="services.html">Services</a>' page there will be a form there for you to fill out and we will receive the email and will respond as soon as possible.
+<h5 class="subsection" id="eight">Q5: How do I log off if someone has locked the computer?</h5>
+<p>If you find you are going to use a locked computer that is not locked by you, you will have to go through some steps before you log them off. Firstly if the person is in the room you will have to consult them if you want to use the computer. If they are not in the room, seek out a lecturer to find out what to do with the locked computer. If everything is OK then in order to log them off you will have to hold the power button until the computer turns off. We are not responsible for any loss of work due to you turning off a computer whilst someone is logged on.</p>
+<h5 class="subsection">Other Questions?</h5>
+<p>Can't find what you are looking for? Answers wrong or didn't work? Got to our '<a href="contact.html">Contact Us</a>' page to ask any additional questions, or to enquire about one of our ready-existing FAQs.</p>
 </div>
 <div id="footer">
 Website made by Team 'That's terrible...' &copy; 2012
