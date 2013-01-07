@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 <!-- Stylesheets -->
 <link rel="stylesheet" href="css/main.css" type="text/css"/>
 <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
@@ -32,20 +32,20 @@
 <!-- Page Title-->
 <div id="titlebar">
 <h3>Our Services</h3>
-<img src="images/fb.png" alt="Facebook" class="social" onclick="social('Facebook')"/>
-<img src="images/twit.png" alt="Facebook" class="social" onclick="social('Twitter')"/>
+<a href="http://www.facebook.com/DuckITSolutions"><img src="images/fb.png" alt="Facebook" class="social"/></a>
+<a href="https://twitter.com/DuckITSolutions"><img src="images/twit.png" alt="Twitter" class="social"/></a>
 </div>
 <!--<h3 class="title">Home</h3>-->
 <div id="main-content">
 <p>We at DuckIT know how frustrating it can be when you computer decides that it doesn't want to play anymore, with this in mind we offer some services to expedite your computers recovery, if you are local to us you can send in your computer so that our trained technicians can take a look at it, or if you're as lazy as us ducks are then we offer a remote access service to help you with all of your software problems.</p>
 <h4 class="section">Remote Desktop</h4>
-<div id="box-right">
+<div class="box-right">
 <p>Evaluation: Free</p>
 <p>Price of fixing the issue is based on the time taken to fix</p>
 </div>
 <p>If you have a software related issue, or a basic virus. Sending your computer to us may be unnecessary. For simple issues we can remotely connect to your computer through the internet no matter how far away you are from us.</p>
 <h4 class="header">Hardware Repair</h4>
-<div id="box-right">
+<div class="box-right">
 <p>Evaluation: Free</p>
 <p>Price of fix varies based upon the hardware issue</p>
 </div>
@@ -53,7 +53,7 @@
 <h4 class="header">How can we help?</h4>
 <p>If you need us to fix a problem, use our service request form here:</p>
 <?php 
-if ($_POST['submited']) {
+if ($_POST['submitted']) {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$service = $_POST['service'];
@@ -115,7 +115,7 @@ if ($_POST['submited']) {
 	</select> <p class="error"><?php if($error4 == True) {echo "Please select a service.";} ?></p>
 	<p>Other Details: </p>
 	<textarea name="details" placeholder="Other Details" rows="5" cols="20"></textarea><br>
-	<input type="hidden" name="submited" value=1>
+	<input type="hidden" name="submitted" value=1>
 	<input type="submit" class="submit" value="Submit">
 	<input type="reset" class="reset"><br>
 	Fields marked with * are required.

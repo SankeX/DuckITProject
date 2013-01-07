@@ -205,21 +205,22 @@ img.social {
 	width: 25px;
 	height: 25px;
 }
-#section-nav {
+.section-nav {
 	padding: 5px;
 	border: 1px solid #000;
 	width: 175px;
 	margin-right: 5px;
 	margin-bottom: 0.5em;
 }
-#section-nav li {
+.section-nav li {
 	list-style:none;
 }
-#section-nav ul {
+.section-nav ul {
 	list-style:none;
 	-webkit-margin-before: 0em;
 	-webkit-margin-after: 0em;
 	-webkit-padding-start: 0px;
+	padding-left:0px;
 }
 ul.links li {
 	list-style:inside;
@@ -295,7 +296,7 @@ p.credit {
 	font-style:italic;
 	font-size:10pt;
 }
-#box-right {
+.box-right {
 	border: 1px solid #6e6e6e;
 	margin-left:5px;
 	float:right;
@@ -308,7 +309,7 @@ h4.header {
 	margin: 0;
 	margin-top: 7px;
 }
-#box-right p {
+.box-right p {
 	margin-top:0px;
 	margin-bottom:2px;
 }

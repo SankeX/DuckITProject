@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 <!-- Stylesheets -->
 <link rel="stylesheet" href="css/main.css" type="text/css"/>
 <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
@@ -14,7 +14,6 @@
 </head>
 <body>
 <div class="wrapper">
-<div id="searchContainer"><input type="text" value="Search..." class="searchinput"/><input type="button" onclick="search()" value="Go" class="gosearch"></div>
 <!-- Header/Banner/Navbar -->
 <div id="header">
 <div id="banner">
@@ -33,8 +32,8 @@
 <!-- Page Title-->
 <div id="titlebar">
 <h3>Contact Us!</h3>
-<img src="images/fb.png" alt="Facebook" class="social" onclick="social('Facebook')"/>
-<img src="images/twit.png" alt="Facebook" class="social" onclick="social('Twitter')"/>
+<a href="http://www.facebook.com/DuckITSolutions"><img src="images/fb.png" alt="Facebook" class="social"/></a>
+<a href="https://twitter.com/DuckITSolutions"><img src="images/twit.png" alt="Twitter" class="social"/></a>
 </div>
 <!--<h3 class="title">Home</h3>-->
 <div id="main-content">
@@ -43,7 +42,7 @@
 <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=fareham+college&amp;aq=&amp;sll=52.8382,-2.327815&amp;sspn=8.671124,23.269043&amp;t=w&amp;ie=UTF8&amp;hq=fareham+college&amp;ll=50.850805,-1.199311&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=fareham+college&amp;aq=&amp;sll=52.8382,-2.327815&amp;sspn=8.671124,23.269043&amp;t=w&amp;ie=UTF8&amp;hq=fareham+college&amp;ll=50.850805,-1.199311&amp;spn=0.006295,0.006295" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 </div>
 <?php 
-if ($_POST['submited']) {
+if ($_POST['submitted']) {
   $name = $_POST['name'];
 	$email = $_POST['email'];
 	$message = $_POST['message'];
@@ -96,7 +95,7 @@ if ($_POST['submited']) {
 	<input type="text" placeholder="Your Email" name="email"> <p class="error"><?php if($error2 == True) {echo "Please insert your Email.";} elseif ($error3 == True) {echo "Please insert a valid Email.";} ?></p>
 	<p>Message: *</p>
 	<textarea name="message" placeholder="Message" rows="5" cols="20"></textarea><p class="error"><?php if($error4 == True) {echo "Please insert your message.";} ?></p>
-	<input type="hidden" name="submited" value=1>
+	<input type="hidden" name="submitted" value=1>
 	<input type="submit" class="submit" value="Submit">
 	<input type="reset" class="reset"><br>
 	Fields marked with * are required.
