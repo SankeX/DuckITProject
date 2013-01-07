@@ -3,7 +3,7 @@
 Coded by Team 'Thats Terrible */
 
 body {
-	background: #232323; /* Old browsers */
+	background: #232323;
 	font-family:Calibri,Arial;
 }
 .wrapper {
@@ -126,6 +126,9 @@ p {
 	margin-right: 5px;
 	-webkit-margin-before: 0em;
 	-webkit-margin-after: 0.1em;
+	margin-top:0em;
+	margin-bottom:0px;
+
 }
 a {
 	text-decoration: underline;
@@ -310,5 +313,9 @@ h4.header {
 	margin-bottom:2px;
 }
 #main-content form {
+	margin-bottom:5px;
+}
+p.error {
+	color:red;
 	margin-bottom:5px;
 }

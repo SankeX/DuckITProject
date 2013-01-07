@@ -42,15 +42,64 @@
 <div id="mapright">
 <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=fareham+college&amp;aq=&amp;sll=52.8382,-2.327815&amp;sspn=8.671124,23.269043&amp;t=w&amp;ie=UTF8&amp;hq=fareham+college&amp;ll=50.850805,-1.199311&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=fareham+college&amp;aq=&amp;sll=52.8382,-2.327815&amp;sspn=8.671124,23.269043&amp;t=w&amp;ie=UTF8&amp;hq=fareham+college&amp;ll=50.850805,-1.199311&amp;spn=0.006295,0.006295" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 </div>
-<form action="php/contact.php" method="post">
-Name: <br>
-<input type="text" placeholder="Your Name" name="name"><br>
-Email: <br>
-<input type="text" placeholder="Your Email" name="email"><br>
-Message: <br>
-<textarea name="message" placeholder="Your Message" rows="5" cols="20"></textarea><br>
-<input type="submit" class="submit">
-<input type="reset" class="reset">
+<?php 
+if ($_POST['submited']) {
+  $name = $_POST['name'];
+	$email = $_POST['email'];
+	$message = $_POST['message'];
+ 
+	$mail_to = "infernexmail@gmail.com";
+ 
+	$body = 'From: '.$name."\n";
+	$body .= 'E-mail: '.$email."\n";
+	$body .= 'Message: '."\n".$message;
+ 
+	$headers = 'From: '.$email."\r\n";
+	$headers .= 'Reply-To: '.$email."\r\n";
+ 
+	if(strlen($name) <= 0) {
+		$error1 = True;
+	}
+ 
+	if(strlen($email) <= 0) {
+		$error2 = True;
+	} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		//Basic email check, wont stop fake emails but does a resonable job
+		$error3 = True;
+	}
+ 
+	if(strlen($message) <= 0) {
+		$error4 = True;
+	}
+ 
+	if($error1 || $error2 || $error3 || $error4) {
+		?>
+		<script language="javascript" type="text/javascript">
+			alert('There was something wrong with the data you entered.');
+		</script>
+		<?php
+	}else{
+		?>
+		<script type="text/javascript">
+			alert('Thank you for the message. We will contact you shortly.');
+		</script>
+		<?php
+		mail($mail_to, "Message from a site visitor: ".$name, $body, $headers);
+ 
+	}
+}
+?>
+<form action="contact.html" method="post">
+	<p>Name: *</p>
+	<input type="text" placeholder="Your Name" name="name"> <p class="error"><?php if($error1 == True) {echo "Please insert your name.";} ?></p><p>
+	Email: *</p>
+	<input type="text" placeholder="Your Email" name="email"> <p class="error"><?php if($error2 == True) {echo "Please insert your Email.";} elseif ($error3 == True) {echo "Please insert a valid Email.";} ?></p>
+	<p>Message: *</p>
+	<textarea name="message" placeholder="Message" rows="5" cols="20"></textarea><p class="error"><?php if($error4 == True) {echo "Please insert your message.";} ?></p>
+	<input type="hidden" name="submited" value=1>
+	<input type="submit" class="submit" value="Submit">
+	<input type="reset" class="reset"><br>
+	Fields marked with * are required.
 </form>
 <p class="address">Address:</p>
 <p class="address">Fareham College,</p>
